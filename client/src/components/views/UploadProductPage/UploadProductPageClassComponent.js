@@ -79,7 +79,6 @@ export class UploadProductPage extends Component {
                     alert('Failed to upload video')
                 }
             })
-    
         }
     
 
