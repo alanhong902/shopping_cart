@@ -11,9 +11,14 @@ function UserCardBlock(props) {
     price: "",
     deleteData: false,
   });
+
+  React.useEffect(() => {
+    props.setTotal(props.productData.price * state.quantity);
+  }, [props, state.quantity]);
   
   const onIncrement = () => {
     setState({ ...state, quantity: state.quantity + 1 });
+    props.setTotal();
   };
   const onDecrement = () => {
     setState({ ...state, quantity: state.quantity - 1 });

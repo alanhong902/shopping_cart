@@ -46,12 +46,13 @@ function CartPage(props) {
                 <UserCardBlock
                     productData={props.location.state.data}
                     removeItem={removeFromCart}
+                    setTotal={setTotal}
                 >
 
                 </UserCardBlock>
  {ShowTotal ? (
           <div style={{ marginTop: "3rem" }}>
-            <h2>Total amounrrrrrrrrrrt: ${20} </h2>
+            <h2>Total amounrrrrrrrrrrt: ${Total} </h2>
           </div>
         ) : ShowSuccess ? (
           <Result status="success" title="Successfully Purchased Items" />
